@@ -1,49 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme Simply Me</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <style>
-  .bg-1 { 
-    background-color: #1abc9c;
-    color: #ffffff;
-  }
-  .bg-2 { 
-    background-color: #474e5d;
-    color: #ffffff;
-  }
-  .bg-3 { 
-    background-color: #ffffff;
-    color: #555555;
-  }
-  .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-  </style>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        .dropdown-submenu {
+            position: relative;
+        }
+        
+        .dropdown-submenu>.dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -6px;
+            margin-left: -1px;
+            -webkit-border-radius: 0 6px 6px 6px;
+            -moz-border-radius: 0 6px 6px;
+            border-radius: 0 6px 6px 6px;
+        }
+        
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-submenu>a:after {
+            display: block;
+            content: " ";
+            float: right;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+            border-width: 5px 0 5px 5px;
+            border-left-color: #ccc;
+            margin-top: 5px;
+            margin-right: -10px;
+        }
+        
+        .dropdown-submenu:hover>a:after {
+            border-left-color: #fff;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="container-fluid bg-1 text-center">
-  <h3>Who Am I?</h3>
-  <img src="bird.jpg" class="img-circle" alt="Bird" width="350" height="350">
-  <h3>I'm an adventurer</h3>
-</div>
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
 
-<div class="container-fluid bg-2 text-center">
-  <h3>What Am I?</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-</div>
+                    <!--                <a class=" navbar-brand " href="#"><span style="font-family: 'Titillium Web', sans-serif;font-size:25px;">The Learning Program <span id="Subject-append"></span></span> </a>-->
+                    <a class=" navbar-brand " href=""><img src="DEPTOFENGLISH_new.png" class="img-responsive  " style="width: 250px !important; margin-top: -10px;" alt="" /></a>
 
-<div class="container-fluid bg-3 text-center">
-  <h3>Where To Find Me?</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li id="admin_dashboard"></li>
+                        <li id="subjecthome"><a href="http://13.126.93.13"><b>HOME</b></a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href=""><b>DEPARTMENTS</b> <span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right multi-level" id="subject">
+                                <!--                            <li id="tlpexam1"><a href="#">Performing Arts</a></li>-->
+                                <li class="dropdown-submenu">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Performing Arts</b></a>
+                                    <!-- Level 4 -->
+                                    <ul class="dropdown-menu">
+                                        <li id="tlpdance"><a href="#"><b>Dance</b></a></li>
+                                        <li id="tlptheater"><a href="#"><b>Theater</b></a></li>
+                                        <li id="tlpmusic"><a href="#"><b>Music</b></a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>EYP</b></a>
+                                    <!-- Level 4 -->
+                                    <ul class="dropdown-menu">
+                                        <li id="tlpeypnum"><a href="#"><b>EYP Numeracy</b></a></li>
+                                        <li id="tlpeyplit"><a href="#"><b>EYP Literacy</b></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
 
+                        </li>
+
+                        <li class="dropdown" id="tlp_aboutus_sub">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href=""><b>ABOUT US</b><span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right ">
+                                <li class="sub_aboutus"><a href="#introductions" class="smooth-scroll"><b>Introduction</b></a></li>
+                                <li class="sub_aboutus"><a href="#vissionmission"><b>Mission and Vision</b></a></li>
+                                <li class="sub_aboutus"><a href="#Department"><b>Message from Department Head</b></a></li>
+
+                                <li class="sub_aboutus"><a href="#Grade_Wise_Goal"><b>Grade Wise Goal</b></a></li>
+                                <li class="sub_aboutus"><a href="#Predagogy"><b>Pedagogy</b></a></li>
+                                <li class="sub_aboutus"><a href="#curriculum_highlights"><b>curriculum highlights</b></a></li>
+                                <li class="sub_aboutus"><a href="#managements"><b>Our Team</b></a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href=""><b>PARENTS CORNER </b><span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li id="gallerytlp"><a href="#"><b>Gallery</b></a></li>
+                                <li id="feed_backtlp1"><a href="#"><b>Feedback</b></a></li>
+
+                                <!--                                <li><a href="#"><b>Results of Assessment</b></a></li>-->
+                                <li id="videoparent"><a href="#"><b>Video content</b></a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href=""><b>STUDENTS CORNER </b><span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+
+                                <li id="tlpquizze"><a href="#"><b>Online Test</b></a></li>
+                                <li id="tlpexam"><a href="#"><b>My Exam</b></a></li>
+                                <li id="studymaterial"><a href="#"><b>Study Material</b></a></li>
+                                <li id="video"><a href="#"><b>Video Content</b></a></li>
+
+                            </ul>
+                        </li>
+
+                        <!--<li><a href="/academic/contactus/">CONTACT US</a></li>-->
+                        <li id="loginlogout"></li>
+                        <li id="logintlp"><a href="#"><b>LOGIN</b></a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </nav>
+    </div>
+    <script>
+        function toggleNavbarMethod() {
+            if ($(window).width() > 768) {
+                $('.navbar .dropdown').on('mouseover', function() {
+                    $('.dropdown-toggle', this).trigger('click');
+                }).on('mouseout', function() {
+                    $('.dropdown-toggle', this).trigger('click').blur();
+                });
+            } else {
+                $('.navbar .dropdown').off('mouseover').off('mouseout');
+            }
+        }
+    </script>
 </body>
+
 </html>
